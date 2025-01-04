@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	stats_label.text = str("HP: "+str(stat["health"])+", "+"Mana: "+str(stat["mana"])+ ", "+"Coins: "+str(stat["coins"])+"\nStrength: "+str(stat["strength"])+", "+"Intelligence: "+str(stat["intelligence"]))
+	stats_label.text = str("HP: "+str(stat["health"])+", "+"MP: "+str(stat["mana"])+ ", "+"Coins: "+str(stat["coins"])+"\nSTR: "+str(stat["strength"])+", "+"INT: "+str(stat["intelligence"]))
 	for stats in stat:
 		if stat[stats] <=0:
 			stat[stats] = 0

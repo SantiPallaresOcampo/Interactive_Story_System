@@ -71,6 +71,16 @@
 			}
 		}
 	},
+	"002_atacar_jabali_exito": {
+		"title": "Arroyo del Bosque",
+		"narr_text": "Con un rápido movimiento, logras esquivar al jabalí y asestarle un golpe certero. El animal cae al suelo, derrotado.",
+		"choices": {
+			"1": {
+				"text": "Continuar tu camino",
+				"output": "001_leñador"
+			}
+		}
+	},
 	"001_leñador": {
 		"title": "Bosque Inicial",
 		"picture": "res://assets/art/leñador_inicial.png",
