@@ -173,4 +173,3 @@ func set_choice_btn(output_value) -> void:
 				"4":
 					choice_4.set_text(str(content_dict[death_page]["choices"][str(choice_4.choice_index)]["text"]))
 					choice_4.visible = true
-

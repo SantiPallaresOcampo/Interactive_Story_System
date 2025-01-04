@@ -12,57 +12,15 @@
 	},
 	"001_equipaje_pastor": {
 		"title": "",
-		"picture": "res://assets/art/equipamiento_inicial.jpeg",
 		"narr_text": "Revisas tu equipaje y encuentras un cuchillo rudimentario y ropa ligera. No es mucho, pero es todo lo que necesitas para empezar tu aventura.",
 		"choices": {
 			"1": {
-				"text": "Ir al bosque",
-				"output": "001_bosque"
-			}
-		}
-	},
-	"001_bosque": {
-		"title": "Bosque Inicial",
-		"picture": "res://assets/art/bosque_inicial.jpeg",
-		"narr_text": "Te adentras en el bosque, el aire fresco y el canto de los pájaros te rodean. El sol se filtra entre las hojas, creando un mosaico de luz y sombra en el suelo. A lo lejos, escuchas el murmullo de un arroyo.",
-		"choices": {
-			"1": {
-				"text": "Seguir el arroyo",
-				"output": "001_arroyo"
+				"text": "Accept the mission",
+				"output": "001_accept_mission"
 			},
 			"2": {
-				"text": "Explorar el bosque",
-				"output": "001_leñador"
-			}
-		}
-	},
-	"001_arroyo": {
-		"title": "Bosque Inicial",
-		"picture": "res://assets/art/javalí_bosque.jpeg",
-		"narr_text": "Sigues el arroyo y te encuentras un jabalí. El animal te mira con ojos desafiantes, listo para defender su territorio.",
-		"choices": {
-			"1": {
-				"text": "Enfrentar al jabalí",
-				"output": "002_enfrentar_jabali"
-			},
-			"2": {
-				"text": "Retroceder y buscar otro camino",
-				"output": "001_leñador"
-			}
-		}
-	},
-	"001_leñador": {
-		"title": "Bosque Inicial",
-		"picture": "res://assets/art/leñador_inicial.png",
-		"narr_text": "Te encuentras con un leñador que corta troncos en el bosque. Te mira con curiosidad y te pregunta qué haces por allí.",
-		"choices": {
-			"1": {
-				"text": "Contarle tu historia",
-				"output": "002_contar_historia"
-			},
-			"2": {
-				"text": "Mentir y decir que estás de paso",
-				"output": "002_mentir"
+				"text": "Ask for more details about the mission that was set out for you",
+				"output": "001_ask_details"
 			}
 		}
 	},
