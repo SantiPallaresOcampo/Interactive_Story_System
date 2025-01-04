@@ -13,7 +13,8 @@
 	"000_equipaje_pastor": {
 		"title": "",
 		"picture": "res://assets/art/equipamiento_inicial.jpeg",
-		"narr_text": "Revisas tu equipaje y encuentras un cuchillo rudimentario y ropa ligera. No es mucho, pero es todo lo que necesitas para empezar tu aventura.",
+		"narr_text": "Revisas tu equipaje y encuentras un cuchillo rudimentario, ropa ligera y unas monedas en los bolsillos del pantalón. No es mucho, pero es todo lo que necesitas para empezar tu aventura.",
+		"buffs": {"strength": 3, "health": 5, "coins": 10},
 		"choices": {
 			"1": {
 				"text": "Ir al bosque",

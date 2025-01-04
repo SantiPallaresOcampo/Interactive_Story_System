@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var stat = {"health": 10, "mana": 10, "coins": 5, "strength": 6, "intelligence": 3}
+var stat = {"health": 5, "mana": 5, "coins": 0, "strength": 3, "intelligence": 3}
 
 @onready var stats_label = $MarginContainer/VBoxContainer/HBoxContainer/Label
 
