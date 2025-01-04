@@ -6,22 +6,23 @@
 		"choices": {
 			"1": {
 				"text": "Preparar equipaje",
-				"output": "001_equipaje_pastor"
+				"output": "000_equipaje_pastor"
 			}
 		}
 	},
-	"001_equipaje_pastor": {
+	"000_equipaje_pastor": {
 		"title": "",
 		"picture": "res://assets/art/equipamiento_inicial.jpeg",
-		"narr_text": "Revisas tu equipaje y encuentras un cuchillo rudimentario y ropa ligera. No es mucho, pero es todo lo que necesitas para empezar tu aventura.",
+		"narr_text": "Revisas tu equipaje y encuentras un cuchillo rudimentario, ropa ligera y unas monedas en los bolsillos del pantalón. No es mucho, pero es todo lo que necesitas para empezar tu aventura.",
+		"buffs": {"strength": 3, "health": 5, "coins": 10},
 		"choices": {
 			"1": {
 				"text": "Ir al bosque",
-				"output": "001_bosque"
+				"output": "000_bosque"
 			}
 		}
 	},
-	"001_bosque": {
+	"000_bosque": {
 		"title": "Bosque Inicial",
 		"picture": "res://assets/art/bosque_inicial.jpeg",
 		"narr_text": "Te adentras en el bosque, el aire fresco y el canto de los pájaros te rodean. El sol se filtra entre las hojas, creando un mosaico de luz y sombra en el suelo. A lo lejos, escuchas el murmullo de un arroyo.",
@@ -32,7 +33,7 @@
 			},
 			"2": {
 				"text": "Explorar el bosque",
-				"output": "001_leñador"
+				"output": "002_leñador"
 			}
 		}
 	},
@@ -43,15 +44,15 @@
 		"choices": {
 			"1": {
 				"text": "Enfrentar al jabalí",
-				"output": "002_enfrentar_jabali"
+				"output": "001_enfrentar_jabali"
 			},
 			"2": {
 				"text": "Retroceder y buscar otro camino",
-				"output": "001_leñador"
+				"output": "002_leñador"
 			}
 		}
 	},
-	"002_enfrentar_jabali": {
+	"001_enfrentar_jabali": {
 		"title": "Arroyo del Bosque",
 		"narr_text": "Te preparas para el combate, empuñando tu cuchillo con firmeza. El jabalí gruñe y carga hacia ti, sus colmillos relucientes en la luz del sol.",
 		"choices": {
@@ -59,29 +60,39 @@
 				"text": "Atacar al jabalí",
 				"requirement": {"strength": 3},
 				"buffs": {"strength": 1},
-				"output": "002_atacar_jabali_exito",
-				"failed_output": "002_atacar_jabali_fallo"
+				"output": "001_atacar_jabali_exito",
+				"failed_output": "001_atacar_jabali_fallo"
 			},
 			"2": {
 				"text": "Tender una trampa al jabalí",
 				"requirement": {"intelligence": 3},
 				"buffs": {"intelligence": 1},
-				"output": "002_tender_trampa_jabali_exito",
-				"failed_output": "002_tender_trampa_jabali_fallo"
+				"output": "001_tender_trampa_jabali_exito",
+				"failed_output": "001_tender_trampa_jabali_fallo"
 			}
 		}
 	},
-	"002_atacar_jabali_exito": {
+	"001_atacar_jabali_fallo": {
+		"title": "Arroyo del Bosque",
+		"narr_text": "Intentas atacar al jabalí, pero el animal es más rápido de lo que esperabas. Te embiste con fuerza y caes al suelo, herido y desarmado.",
+		"choices": {
+			"1": {
+				"text": "Retroceder y buscar otro camino",
+				"output": "002_leñador"
+			}
+		}
+	},
+	"001_atacar_jabali_exito": {
 		"title": "Arroyo del Bosque",
 		"narr_text": "Con un rápido movimiento, logras esquivar al jabalí y asestarle un golpe certero. El animal cae al suelo, derrotado.",
 		"choices": {
 			"1": {
 				"text": "Continuar tu camino",
-				"output": "001_leñador"
+				"output": "002_leñador"
 			}
 		}
 	},
-	"001_leñador": {
+	"002_leñador": {
 		"title": "Bosque Inicial",
 		"picture": "res://assets/art/leñador_inicial.png",
 		"narr_text": "Te encuentras con un leñador que corta troncos en el bosque. Te mira con curiosidad y te pregunta si le quieres comprar madera.",
@@ -90,7 +101,7 @@
 				"text": "Comprar madera",
 				"requirement": {"coins": 2},
 				"buffs": {"coins": -2},
-				"output": "002_comprar_madera"
+				"output": "002_comprar_madera_leñador"
 
 			},
 			"2": {
@@ -102,258 +113,7 @@
 			},
 			"3": {
 				"text": "Ignorar al leñador y seguir explorando",
-				"output": "002_ignorar"
-			}
-		}
-	},
-	"001_accept_mission": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"picture": "res://assets/art/Forest_Path.jpg",
-		"narr_text": "You accept the mission without hesitation. Elwin hands you a map and a magical amulet. \"The artifact was last seen near the Darkwood Grove,\" he says.",
-		"choices": {
-			"1": {
-				"text": "Head to Darkwood Grove",
-				"output": "002_darkwood_grove"
-			},
-			"2": {
-				"text": "Examine the map first",
-				"output": "001_examine_map"
-			}
-		}
-	},
-	"001_ask_details": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "You ask Elwin for more details about the artifact. \"It is a crystal of immense power, capable of controlling the elements. In the wrong hands, it could spell disaster,\" he explains.",
-		"choices": {
-			"1": {
-				"text": "Accept the mission",
-				"output": "001_accept_mission"
-			},
-			"2": {
-				"text": "Ask about the dangers",
-				"output": "001_ask_dangers"
-			}
-		}
-	},
-	"001_examine_map": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "You examine the map closely. It shows a path through the forest, leading to a marked location in Darkwood Grove. You feel a sense of foreboding as you study the map.",
-		"choices": {
-			"1": {
-				"text": "Head to Darkwood Grove",
-				"output": "002_darkwood_grove"
-			},
-			"2": {
-				"text": "Ask Elwin for guidance",
-				"output": "001_ask_guidance"
-			}
-		}
-	},
-	"001_ask_dangers": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "Elwin warns you, \"The path to Darkwood Grove is fraught with peril. Be wary of the creatures that lurk in the shadows.\"",
-		"choices": {
-			"1": {
-				"text": "Accept the mission",
-				"output": "001_accept_mission"
-			},
-			"2": {
-				"text": "Ask for a protective spell",
-				"output": "001_protective_spell"
-			}
-		}
-	},
-	"001_ask_guidance": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "Elwin nods and says, \"Trust in your training and the amulet I have given you. It will guide you and protect you from harm.\"",
-		"choices": {
-			"1": {
-				"text": "Head to Darkwood Grove",
-				"output": "002_darkwood_grove"
-			},
-			"2": {
-				"text": "Ask about the amulet",
-				"output": "001_ask_about_amulet"
-			}
-		}
-	},
-	"001_protective_spell": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "Elwin casts a protective spell over you. \"This will shield you from minor harm. Use it wisely,\" he advises.",
-		"choices": {
-			"1": {
-				"text": "Head to Darkwood Grove",
-				"output": "002_darkwood_grove"
-			}
-		}
-	},
-	"001_ask_about_amulet": {
-		"title": "Chapter 1: A Mysterious Summons",
-		"narr_text": "\"The amulet holds a fragment of my power. It will guide you through the forest and protect you from dark magic,\" Elwin explains.",
-		"choices": {
-			"1": {
-				"text": "Head to Darkwood Grove",
-				"output": "002_darkwood_grove"
-			}
-		}
-	},
-	"002_darkwood_grove": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You reach Darkwood Grove, the air thick with an eerie silence. As you step into the grove, you hear a rustling in the bushes.",
-		"choices": {
-			"1": {
-				"text": "Investigate the noise",
-				"output": "002_investigate_noise"
-			},
-			"2": {
-				"text": "Proceed cautiously",
-				"output": "002_proceed_cautiously"
-			}
-		}
-	},
-	"002_investigate_noise": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You investigate the noise and find a wounded creature. It looks at you with pleading eyes, seeking help.",
-		"choices": {
-			"1": {
-				"text": "Help the creature",
-				"output": "002_help_creature"
-			},
-			"2": {
-				"text": "Ignore and continue",
-				"output": "002_ignore_creature"
-			}
-		}
-	},
-	
-	 "002_proceed_cautiously": {
-		"title": "Chapter 2: Darkwood Grove",
-		"picture": "res://assets/art/Forest_Path.jpg",
-		"narr_text": "You proceed cautiously through the grove, every shadow and sound putting you on edge. Suddenly, you feel a presence behind you.",
-		"choices": {
-			"1": {
-				"text": "Turn around quickly",
-				"output": "002_turn_around"
-			},
-			"2": {
-				"text": "Draw your weapon",
-				"output": "002_draw_weapon"
-			},
-			"3": {
-				"text": "Start conjuring a fireball spell \n(-20 mana)",
-				"requirement": {"mana": 20},
-				"buffs":{"mana": -20, "health": 1},
-				"output": "002_draw_weapon",
-				"failed_output": "002_ignore_creature"
-			}
-		}
-	},
-	"002_help_creature": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You help the wounded creature, using your healing magic. It transforms into a grateful forest spirit who promises to aid you in your quest.",
-		"choices": {
-			"1": {
-				"text": "Continue your journey",
-				"output": "002_continue_journey"
-			}
-		}
-	},
-	"002_ignore_creature": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You decide to ignore the creature and continue your journey. As you move deeper into the grove, you can't shake the feeling that something is watching you.",
-		"choices": {
-			"1": {
-				"text": "End of Sample"
-			}
-		}
-	},
-	"002_turn_around": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You turn around quickly and see a shadowy figure lurking in the trees. It steps forward, revealing itself to be a guardian of the grove.",
-		"choices": {
-			"1": {
-				"text": "Speak to the guardian",
-				"output": "002_speak_guardian"
-			},
-			"2": {
-				"text": "Prepare for battle",
-				"output": "002_prepare_battle"
-			}
-		}
-	},
-	"002_draw_weapon": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You draw your weapon and turn around, ready for any threat. A guardian of the grove stands before you, watching your every move.",
-		"choices": {
-			"1": {
-				"text": "Speak to the guardian",
-				"output": "002_speak_guardian"
-			},
-			"2": {
-				"text": "Prepare for battle",
-				"output": "002_prepare_battle"
-			}
-		}
-	},
-	"002_speak_guardian": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You speak to the guardian, explaining your mission. It listens intently, then offers to guide you safely through the grove.",
-		"choices": {
-			"1": {
-				"text": "Accept the guidance",
-				"output": "002_accept_guidance"
-			},
-			"2": {
-				"text": "Refuse and continue alone",
-				"output": "002_refuse_guidance"
-			}
-		}
-	},
-	"002_prepare_battle": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You prepare for battle, but the guardian raises a hand in peace. \"I mean you no harm,\" it says. \"Let us speak.\"",
-		"choices": {
-			"1": {
-				"text": "Speak to the guardian",
-				"output": "002_speak_guardian"
-			}
-		}
-	},
-	"002_accept_guidance": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You accept the guardian's guidance. Together, you navigate the dark paths of the grove, moving closer to your goal.",
-		"choices": {
-			"1": {
-				"text": "End of Sample"
-			}
-		}
-	},
-	"002_refuse_guidance": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You refuse the guardian's offer and continue alone. The path ahead is treacherous, and you feel the weight of your decision with every step.",
-		"choices": {
-			"1": {
-				"text": "End of Sample"
-			}
-		}
-	},
-	"002_continue_journey": {
-		"title": "Chapter 2: Darkwood Grove",
-		"narr_text": "You continue your journey, with the forest spirit watching over you. You feel a renewed sense of purpose and determination.",
-		"choices": {
-			"1": {
-				"text": "End of Sample"
-			}
-		}
-	},
-	
-	
-	"health_is_zero": {
-		"title" : "",
-		"narr_text": "A wave of dizziness washes over you. The world blurs and fades at the edges. Despite your best efforts (or perhaps due to a careless mistake), your body gives way. Everything goes dark",
-		"choices": {
-			"1": {
-				"text": "End of game"
+				"output": "002_ignorar_leñador"
 			}
 		}
 	}
