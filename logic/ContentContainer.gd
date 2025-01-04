@@ -144,15 +144,7 @@ func set_buff(output_value) -> void:
 			elif buff_value[key] < 0:
 				statindicator.text = statindicator.text + "\n" + "[color=red]" + str([key][0]) + " has decreased by " + str(-buff_value[key]) + "[/color]"
 			player_stats[key] += buff_value[key]
-		# var buff_value = output_value["buffs"]
-		# for key in buff_value.keys():
-		# 	player_stats[key] += buff_value[key]
-		# 	print(player_stats[key])
-		# 	if buff_value[key] >= 0:
-		# 		statindicator.text = statindicator.text + "\n" + "[color=green]" + str([key][0]) + " has increased by " + str(buff_value[key]) + "[/color]"
-		# 	elif buff_value[key] < 0:
-		# 		statindicator.text = statindicator.text + "\n" + "[color=red]" + str([key][0]) + " has decreased by " + str(-buff_value[key]) + "[/color]"
-
+		
 
 # Function to set the choice buttons
 func set_choice_btn(output_value) -> void:
