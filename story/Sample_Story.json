@@ -37,7 +37,7 @@
 		}
 	},
 	"001_arroyo": {
-		"title": "Bosque Inicial",
+		"title": "Arroyo del Bosque",
 		"picture": "res://assets/art/javalí_bosque.jpeg",
 		"narr_text": "Sigues el arroyo y te encuentras un jabalí. El animal te mira con ojos desafiantes, listo para defender su territorio.",
 		"choices": {
@@ -51,18 +51,48 @@
 			}
 		}
 	},
+	"002_enfrentar_jabali": {
+		"title": "Arroyo del Bosque",
+		"narr_text": "Te preparas para el combate, empuñando tu cuchillo con firmeza. El jabalí gruñe y carga hacia ti, sus colmillos relucientes en la luz del sol.",
+		"choices": {
+			"1": {
+				"text": "Atacar al jabalí",
+				"requirement": {"strength": 3},
+				"buffs": {"strength": 1},
+				"output": "002_atacar_jabali_exito",
+				"failed_output": "002_atacar_jabali_fallo"
+			},
+			"2": {
+				"text": "Tender una trampa al jabalí",
+				"requirement": {"intelligence": 3},
+				"buffs": {"intelligence": 1},
+				"output": "002_tender_trampa_jabali_exito",
+				"failed_output": "002_tender_trampa_jabali_fallo"
+			}
+		}
+	},
 	"001_leñador": {
 		"title": "Bosque Inicial",
 		"picture": "res://assets/art/leñador_inicial.png",
-		"narr_text": "Te encuentras con un leñador que corta troncos en el bosque. Te mira con curiosidad y te pregunta qué haces por allí.",
+		"narr_text": "Te encuentras con un leñador que corta troncos en el bosque. Te mira con curiosidad y te pregunta si le quieres comprar madera.",
 		"choices": {
 			"1": {
-				"text": "Contarle tu historia",
-				"output": "002_contar_historia"
+				"text": "Comprar madera",
+				"requirement": {"coins": 2},
+				"buffs": {"coins": -2},
+				"output": "002_comprar_madera"
+
 			},
 			"2": {
-				"text": "Mentir y decir que estás de paso",
-				"output": "002_mentir"
+				"text": "engañarlo y robarle",
+				"requirement": {"intelligence": 4},
+				"buffs": {"coins": 10},
+				"output": "002_robo_leñador_exito",
+				"failed_output": "002_robo_leñador_fallo"
+			},
+			"3": {
+				"text": "Ignorar al leñador y seguir explorando",
+				"output": "002_ignorar"
 			}
 		}
 	},

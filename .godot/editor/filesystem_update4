@@ -1,3 +1,6 @@
 res://scenes/game_screen.tscn
 res://story/Sample_Story.json
 res://logic/ContentContainer.gd
+res://logic/ChoiceButtons.gd
+res://logic/content_data.gd
+res://logic/game_screen.gd
