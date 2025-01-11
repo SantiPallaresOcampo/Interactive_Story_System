@@ -227,7 +227,7 @@ layout_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "SUBSCRIBE TO RED INDIE GAMES"
+text = "Mochila"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/ContentContainer/MarginContainer/VBoxContainer/ChoiceContainer/Button" to="MarginContainer/VBoxContainer/ScrollContainer/ContentContainer/MarginContainer/VBoxContainer/ChoiceContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/ContentContainer/MarginContainer/VBoxContainer/ChoiceContainer2/Button" to="MarginContainer/VBoxContainer/ScrollContainer/ContentContainer/MarginContainer/VBoxContainer/ChoiceContainer2" method="_on_button_pressed"]
