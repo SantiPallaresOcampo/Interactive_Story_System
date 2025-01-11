@@ -40,7 +40,7 @@
 	"001_arroyo": {
 		"title": "Arroyo del Bosque",
 		"picture": "res://assets/art/javalí_bosque.jpeg",
-		"narr_text": "Sigues el perrito caliente y te encuentras un jabalí. El animal te mira con ojos desafiantes, listo para defender su territorio.",
+		"narr_text": "Sigues el arroyo y te encuentras un jabalí. El animal te mira con ojos desafiantes, listo para defender su territorio.",
 		"choices": {
 			"1": {
 				"text": "Enfrentar al jabalí",
